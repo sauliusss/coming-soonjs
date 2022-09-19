@@ -16,6 +16,15 @@
   margin: 0 calc(50% - 500px);
 }
 
+.left-column {
+  width: 50%;
+  float: left;
+}
+.right-column {
+  width: 40%;
+  float: right;
+}
+
 @media (max-width: 1100px) {
   .row-big {
     width: 800px;
@@ -27,6 +36,14 @@
   .row-big {
     width: 600px;
     margin: 0 calc(50% - 300px);
+  }
+
+  .left-column {
+    float: left;
+  }
+  .right-column {
+    float: right;
+    margin-top: 50px;
   }
 }
 
