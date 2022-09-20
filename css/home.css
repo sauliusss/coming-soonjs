@@ -16,10 +16,46 @@
   background-color: var(--color-primary);
 }
 
+/* hero section */
+
 .container.hero {
   padding-bottom: 25px;
+  background-image: url(../img/banner-1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
 }
 
+.hero > .row-small {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.logo {
+  height: 40px;
+  width: 200px;
+  object-fit: contain;
+  object-position: center;
+}
+
+.main-title {
+  text-transform: uppercase;
+  font-size: 70px;
+  color: var(--color-dark);
+}
+
+.main-description {
+  font-size: 20px;
+  color: var(--color-grey);
+}
+
+/* main content section */
+
+/* footer section */
 footer.container {
   padding-top: 0;
 }
