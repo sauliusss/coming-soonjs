@@ -3,10 +3,15 @@
 // *****************
 
 class Clock {
-  constructor(selector) {
+  constructor(selector, targetDate) {
+    // tie du yra parametrai
     this.selector = selector;
+    this.targetDate = targetDate;
+
+    // custom kintamieji, kurie yra viduje susigalvoti
     this.DOM = null;
 
+    // kad pasileistu testas
     this.init();
   }
 
@@ -28,8 +33,21 @@ class Clock {
     return true;
   }
 
+  formatTime(timeValues) {
+    const updatedTime = [];
+    for (let i = 0; i < timeValues.length; i++) {
+      const time = timeValues[i];
+      if (i === 0 || time > 9) {
+        updatedTime.push(time);
+      } else {
+        updatedTime.push("0" + time);
+      }
+    }
+    return updatedTime;
+  }
+
   render() {
-    const timeValues = [432, 9, 37, 39];
+    const timeValues = this.formatTime([432, 9, 37, 39]);
     const labelValues = ["Days", "Hours", "Minutes", "Seconds"];
     let HTML = "";
 
