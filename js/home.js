@@ -6,5 +6,5 @@ import { socialsData } from "./data/socialsData.js";
 
 // EXECUTION
 
-Clock("#clock");
+new Clock("#clock");
 socials("footer .socials", socialsData);
